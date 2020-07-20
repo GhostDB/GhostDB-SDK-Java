@@ -8,9 +8,9 @@ import java.util.zip.CRC32;
 public class VirtualPoint {
 
     private final String ip;
-    private final CRC32 index;
+    private final long index;
 
-    public VirtualPoint(CRC32 index, String ip) {
+    public VirtualPoint(long index, String ip) {
         this.ip = ip;
         this.index = index;
     }
@@ -19,7 +19,7 @@ public class VirtualPoint {
         return ip;
     }
 
-    public CRC32 getIndex() {
-        return index;
-    }
+	public long getIndex() {
+		return index;
+	}
 }
