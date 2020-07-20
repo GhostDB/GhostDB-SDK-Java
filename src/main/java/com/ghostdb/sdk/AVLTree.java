@@ -70,12 +70,12 @@ public class AVLTree {
 		return new NodePair(currentNode.getIndex(), currentNode.getVp());
 	}
 
-	public Node nextPair(long key) {
+	public Pair nextPair(long key) {
 		Node gteNode = this.getNextNode(node, key);
 		if (gteNode == null) {
 			return null;
 		}
-		return new Node(gteNode.getIndex(), gteNode.getVp());
+		return new NodePair(gteNode.getIndex(), gteNode.getVp());
 	}
 
 	public boolean isBalanced() {

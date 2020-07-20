@@ -2,8 +2,8 @@ package com.ghostdb.sdk;
 
 public interface Pair {
 
-	long index();
+	long getIndex();
 
-	VirtualPoint value();
+	VirtualPoint getValue();
 
 }

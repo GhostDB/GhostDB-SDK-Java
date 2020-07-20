@@ -37,25 +37,6 @@ class AVLTreeTest {
 		assertEquals(2, tree.getNode().getIndex());
 	}
 
-	/*
-	 * func TestAvlTreeRebalanceRightRotation(t *testing.T) {
-	 * 	var tree *AVLTree = NewAvlTree()
-	 * 	var vp1 *VirtualPoint = NewVirtualPoint("127.0.0.1", "1")
-	 * 	var vp2 *VirtualPoint = NewVirtualPoint("127.0.0.2", "2")
-	 * 	var vp3 *VirtualPoint = NewVirtualPoint("127.0.0.3", "3")
-	 * 	var vp4 *VirtualPoint = NewVirtualPoint("127.0.0.4", "4")
-	 * 	var vp5 *VirtualPoint = NewVirtualPoint("127.0.0.5", "5")
-	 *
-	 * 	tree.InsertNode("3", vp3)
-	 * 	tree.InsertNode("2", vp2)
-	 * 	tree.InsertNode("1", vp1)
-	 * 	tree.InsertNode("4", vp4)
-	 * 	tree.InsertNode("5", vp5)
-	 *
-	 * 	AssertEqual(t, tree.node.right.node.index, "4", "")
-	 * }
-	 */
-
 	@Test
 	void testAvlTreeRebalanceRightRotation() {
 		final AVLTree tree = new AVLTree();
@@ -194,7 +175,7 @@ class AVLTreeTest {
 		tree.insertNode(6, vp6);
 
 		final Pair node = tree.minimumPair();
-		assertEquals(1, node.index());
+		assertEquals(1, node.getIndex());
 	}
 
 	@Test
@@ -215,7 +196,7 @@ class AVLTreeTest {
 		tree.insertNode(5, vp5);
 		tree.insertNode(7, vp7);
 
-		final Node node = tree.nextPair(6);
+		final Pair node = tree.nextPair(6);
 		assertEquals(7, node.getIndex());
 	}
 

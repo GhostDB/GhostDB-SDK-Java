@@ -11,12 +11,12 @@ public class NodePair implements Pair {
 	}
 
 	@Override
-	public long index() {
+	public long getIndex() {
 		return index;
 	}
 
 	@Override
-	public VirtualPoint value() {
+	public VirtualPoint getValue() {
 		return vp;
 	}
 }
